@@ -11,7 +11,7 @@ const useGeoHooks = () => {
 
     const getWeatherData = async (query) => {
         setLoading(true);
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY_ALT}&q=${query}&days=7`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY_ALT}&q=${query}&days=7`,)
             .then(response => response.json())
             .then(async data => {
                 setWeatherData(data);
